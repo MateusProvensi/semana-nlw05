@@ -1,12 +1,7 @@
-import express, { json } from "express";
-import "./database";
-import { routes } from "./routes";
+import { http } from "./http";
+import "./websocket/client";
+import "reflect-metadata";
 
-const app = express();
-
-app.use(express.json());
-app.use(routes);
-
-app.listen(3333, () => {
+http.listen(3333, () => {
   console.log("Is running!!!");
 });
