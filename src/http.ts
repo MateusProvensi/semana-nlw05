@@ -1,4 +1,4 @@
-import express, { json } from "express";
+import express from "express";
 import { createServer } from "http";
 import { Server, Socket } from "socket.io";
 import path from "path";
@@ -15,6 +15,10 @@ app.set("view engine", "html");
 
 app.get("/pages/client", (request, response) => {
   return response.render("html/client.html");
+});
+
+app.get("/pages/admin", (request, response) => {
+  return response.render("html/admin.html");
 });
 
 const http = createServer(app);

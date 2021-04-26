@@ -10,7 +10,7 @@ interface IMessageCreate {
 
 class MessageService {
   private messagesRepository: Repository<Message>;
-  
+
   constructor() {
     this.messagesRepository = getCustomRepository(MessagesRepository);
   }
@@ -32,7 +32,7 @@ class MessageService {
       where: { user_id },
       relations: ["user"],
     });
-
+    console.log(list);
     return list;
   }
 }
