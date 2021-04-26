@@ -2,6 +2,8 @@ import { http } from "./http";
 import "./websocket/client";
 import "./websocket/admin";
 
-http.listen(3333, () => {
-  console.log("Is running!!!");
+const port = 3333;
+
+http.listen(port, () => {
+  console.log(`Is running on port: ${port} !!!`);
 });

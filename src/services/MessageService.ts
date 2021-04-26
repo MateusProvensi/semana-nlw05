@@ -32,7 +32,6 @@ class MessageService {
       where: { user_id },
       relations: ["user"],
     });
-    console.log(list);
     return list;
   }
 }

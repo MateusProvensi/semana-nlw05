@@ -13,7 +13,7 @@ io.on("connect", (socket) => {
   const usersService = new UsersService();
   const messageService = new MessageService();
 
-  socket.on("client_first_acess", async (params) => {
+  socket.on("client_first_access", async (params) => {
     const socket_id = socket.id;
     const { text, email } = params as IParams;
     let user_id = null;
